@@ -18,7 +18,7 @@ blogPostsSchema.virtual('authorString').get(function() {
 
 // even without a virtual, we would still need to serialize correct?
 
-blogPostsSchema.serialize = function() {
+blogPostsSchema.methods.serialize = function() {
   return {
     id: this._id,
     title: this.title,
