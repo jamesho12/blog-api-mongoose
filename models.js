@@ -33,3 +33,5 @@ const BlogPosts = mongoose.model('Blogposts', blogPostsSchema);
 // what is the proper naming convention for collections? Camel case or lowercase?
 // so in the example mongoose.model breaks it down from 'Restaurants' to 'restaurants', how would this work for 'BlogPosts'?
 // will it be 'blogPosts' or 'blogposts'
+
+module.exports = { BlogPosts };

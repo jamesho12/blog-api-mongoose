@@ -15,16 +15,12 @@ app.get('/blogPosts', (req, res) => {
   BlogPosts
     .find()
     .then(posts => {
-      res.json({
-        blogs: blogs.map(blog => blog.serialize())
-      });
+      res.json({ posts: posts.map(post => post.serialize()) });
     })
-    .catch(
-      err => {
+    .catch(err => {
         console.error(err);
         res.status(500).json({ message: 'Internal server error' });
-      }
-    )
+    });
 });
 
 let server;
